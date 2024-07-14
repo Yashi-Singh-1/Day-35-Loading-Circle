@@ -1,0 +1,106 @@
+.frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 400px;
+    height: 400px;
+    margin-top: -200px;
+    margin-left: -200px;
+    border-radius: 2px;
+    box-shadow: 1px 2px 10px 0px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    background: #1BBE9E;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: bgColorChange 12s linear infinite;
+}
+  
+.center {
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+
+svg {
+    width: 100%;
+    height: 100%;
+}
+
+.bg {
+    fill: none;
+    stroke: #333;
+    stroke-width: 4;
+}
+
+.loader {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 4;
+    stroke-linecap: round;
+    stroke-dasharray: 288;
+    transform-origin: center;
+    animation: line 4s linear infinite, spin 3s linear infinite;
+}
+
+@keyframes line {
+    0% {
+        stroke-dashoffset: 1152; /* 288 * 4 */
+    }
+    100% {
+        stroke-dashoffset: 576; /* 288 * 2 */
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(-90deg);
+    }
+    100% {
+        transform: rotate(270deg);
+    }
+}
+
+@keyframes bgColorChange {
+    0% {
+        background: linear-gradient(135deg, #f4c4f3, #fc67fa); 
+    }
+    8.33% {
+    background: linear-gradient(135deg, #E100FF, #7F00FF); 
+    }
+    16.67% {
+        background: linear-gradient(135deg, #f2fcfe, #1c92d2); 
+    }
+    25% {
+        background: linear-gradient(135deg, #5B86E5, #36D1DC); 
+    }
+    33.33% {
+        background: linear-gradient(135deg, #0ED2F7, #B2FEFA); 
+
+    }
+    41.67% {
+        background: linear-gradient(135deg, #ef32d9, #89fffd); 
+    }
+    50% {
+        background: linear-gradient(135deg, #B06AB3, #4568DC);
+    }
+    58.33% {
+        background: linear-gradient(135deg, #EC6EAD, #3494E6);
+    }
+    66.67% {
+        background: linear-gradient(135deg, #FDB99B, #CF8BF3, #A770EF); 
+    }
+    75% {
+        background: linear-gradient(135deg, #d53369, #cbad6d);
+    }
+    83.33% {
+        background: linear-gradient(135deg, #fc354c, #0abfbc);
+    }
+    91.67% {
+        background: linear-gradient(135deg, #dae2f8, #d6a4a4);
+    }
+    100% {
+        background: linear-gradient(135deg, #5c258d, #4389a2);
+    }
+}
